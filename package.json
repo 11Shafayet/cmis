@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^4.41.3",
     "core-js": "^3.35.0",
     "flowbite-react": "^0.7.2",
     "lottie-react": "^2.4.0",

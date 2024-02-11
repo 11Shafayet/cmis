@@ -10,14 +10,13 @@ const Footer = () => {
           <div>
             <Image src={map} alt="" />
           </div>
-          <div>
-            <Image src={map} alt="" />
-          </div>
+          <div>{/* <Image src={map} alt="" /> */}</div>
           <div>
             <h4 className="text-3xl font-bold text-primary mb-6">Contact Us</h4>
             <ul>
               <li>
                 <FaWhatsapp />
+                +8801638719578
               </li>
             </ul>
           </div>
