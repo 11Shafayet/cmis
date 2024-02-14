@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '/public/assets/logo.png';
+import logo from '@/public/assets/logo.png';
 import { usePathname } from 'next/navigation';
 
 const navItems = [

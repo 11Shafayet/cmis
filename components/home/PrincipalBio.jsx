@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import principle from '/public/assets/teachers/principle.jpeg';
+import principle from '@/public/assets/teachers/principle.jpeg';
 
 const PrincipalBio = () => {
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import vicePri from '/public/assets/teachers/vice-principle.jpeg';
+import vicePri from '@/public/assets/teachers/vice-principle.jpeg';
 
 const VicePriBio = () => {
   return (
