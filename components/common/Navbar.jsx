@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/public/assets/logo.png';
 import { usePathname } from 'next/navigation';
+import { FaChevronDown } from 'react-icons/fa';
 
 const navItems = [
   {
@@ -13,37 +14,165 @@ const navItems = [
   },
   {
     text: 'About Us',
-    link: '/about-us',
+    subMenu: [
+      {
+        text: 'History Bangla',
+        link: '/history-bangla',
+      },
+      {
+        text: 'History English',
+        link: '/history-english',
+      },
+      {
+        text: 'Citizen Charter',
+        link: '/citizen-charter',
+      },
+      {
+        text: 'Vision & Mission',
+        link: '/vision-and-mission',
+      },
+    ],
   },
   {
     text: 'Academic',
-    link: '/academic',
+    subMenu: [
+      {
+        text: `Principal's Information`,
+        link: '/principals-information',
+      },
+      {
+        text: `Principal's Information`,
+        link: '/principal',
+      },
+      {
+        text: `Vice Principal's Information`,
+        link: '/vice-principal',
+      },
+      {
+        text: `Teachers Information`,
+        link: '/teachers',
+      },
+      {
+        text: `Holiday Calendar`,
+        link: '/holiday-calendar',
+      },
+      {
+        text: `Academic Calendar`,
+        link: '/academic-calendar',
+      },
+      {
+        text: `Class Routine`,
+        link: '/class-routine',
+      },
+      {
+        text: `3rd & 4th Class Employee Information`,
+        link: '/employees',
+      },
+    ],
   },
   {
     text: 'Department',
-    link: '/department',
+    subMenu: [
+      {
+        text: `Department's History`,
+        link: '/departments-history',
+      },
+      {
+        text: `Teachers Info`,
+        link: '/teachers',
+      },
+      {
+        text: `Students Info`,
+        link: '/students-info',
+      },
+      {
+        text: `Notice`,
+        link: '/notice',
+      },
+      {
+        text: `Events`,
+        link: '/events',
+      },
+      {
+        text: `Results`,
+        link: '/results',
+      },
+    ],
   },
   {
     text: 'Notices',
-    link: '/notices',
+    subMenu: [
+      {
+        text: `Recent Notices`,
+        link: '/recent-notices',
+      },
+      {
+        text: `Office Order`,
+        link: '/office-order',
+      },
+      {
+        text: `Admission Notice`,
+        link: '/admission-notice',
+      },
+      {
+        text: `Exam Notice`,
+        link: '/exam-notice',
+      },
+      {
+        text: `NOC`,
+        link: '/noc',
+      },
+    ],
   },
   {
     text: 'Exams',
-    link: '/exams',
+    subMenu: [
+      {
+        text: `Exam Notices`,
+        link: '/exam-notices',
+      },
+      {
+        text: `Exam Routine`,
+        link: '/exam-routine',
+      },
+      {
+        text: `Syllabus`,
+        link: '/syllabus',
+      },
+    ],
   },
   {
     text: 'Admission',
-    link: '/admission',
+    subMenu: [
+      {
+        text: `Admission Notice`,
+        link: '/admission-notice',
+      },
+      {
+        text: `Admission Info`,
+        link: '/admission-info',
+      },
+    ],
   },
   {
     text: 'Gallery',
-    link: '/gallery',
+    subMenu: [
+      {
+        text: `Image Gallery`,
+        link: '/image-gallery',
+      },
+      {
+        text: `Video Gallery`,
+        link: '/video-gallery',
+      },
+    ],
   },
 ];
 
 const Navbar = () => {
-  const [activeNav, setActiveNav] = useState(false);
   const pathname = usePathname();
+  const [activeNav, setActiveNav] = useState(false);
+  const [subMenu, setSubMenu] = useState(1);
 
   return (
     <>
@@ -76,12 +205,31 @@ const Navbar = () => {
             >
               {navItems.map((item, i) => (
                 <li
-                  className={`text-base font-medium hover:text-primary ${
+                  className={`relative flex items-center gap-2 text-base font-medium hover:scale-105 z-[1000] ${
                     pathname === item.link && 'text-primary'
                   }`}
                   key={i}
                 >
-                  <Link href={item.link}>{item.text}</Link>
+                  <Link href={item.link ? item.link : ''}>{item.text}</Link>
+                  {item.subMenu && <FaChevronDown />}
+                  {item.subMenu && subMenu === i && (
+                    <ul className="absolute top-[111%] flex flex-col gap-y-2 right-0 shadow-light bg-white p-4 md:p-6 min-w-[250px]">
+                      {item.subMenu.map((sub, j) => {
+                        return (
+                          <li
+                            className={`relative text-base font-medium hover:text-primary ${
+                              pathname === sub.link && 'text-primary'
+                            }`}
+                            key={j}
+                          >
+                            <Link href={sub.link ? sub.link : ''}>
+                              {sub.text}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
