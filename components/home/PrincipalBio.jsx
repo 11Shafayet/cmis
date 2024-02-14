@@ -1,15 +1,20 @@
 import Image from 'next/image';
-import user from '/public/assets/teachers/user.png';
+import principle from '/public/assets/teachers/principle.jpeg';
 
 const PrincipalBio = () => {
   return (
-    <div className="bg-white shadow-light rounded-md p-4 md:p-6">
-      <div className="flex flex-col sm:flex-row gap-4 items-start">
-        <Image src={user} alt="" className="w-20 h-20 object-cover" />
+    <div className="bg-white shadow-light rounded-md p-4 md:p-6 flex items-center justify-center">
+      <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+        <Image
+          src={principle}
+          alt="principle"
+          className="w-28 h-28 xl:w-36 xl:h-36 object-cover rounded-md"
+        />
         <div>
-          <h5 className="text-xl font-semibold">The Name Of the Principle</h5>
+          <h5 className="text-2xl font-semibold">MD. Habibur Rahman</h5>
           <h5 className="text-lg font-medium">Principle</h5>
-          <p className="opacity-75">2013-On Going</p>
+          <h5 className="font-medium">Mobile: 01711-291258</h5>
+          <p className="opacity-75 italic">habibtahlil@gmail.com</p>
         </div>
       </div>
     </div>
