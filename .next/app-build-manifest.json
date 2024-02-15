@@ -11,80 +11,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/history-bangla/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/history-bangla/page.js"
-    ],
-    "/history-english/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/history-english/page.js"
-    ],
-    "/citizen-charter/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/citizen-charter/page.js"
-    ],
-    "/vision-and-mission/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/vision-and-mission/page.js"
-    ],
-    "/principal/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/principal/page.js"
-    ],
-    "/vice-principal/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/vice-principal/page.js"
-    ],
-    "/teachers/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/teachers/page.js"
-    ],
-    "/holiday-calendar/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/holiday-calendar/page.js"
-    ],
-    "/academic-calendar/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/academic-calendar/page.js"
-    ],
-    "/class-routine/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/class-routine/page.js"
-    ],
-    "/employees/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/employees/page.js"
-    ],
-    "/departments-history/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/departments-history/page.js"
-    ],
-    "/students-info/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/students-info/page.js"
-    ],
-    "/events/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/events/page.js"
-    ],
-    "/results/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/results/page.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }

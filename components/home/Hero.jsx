@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLottie } from 'lottie-react';
 import ScrollDown from '../../components/common/ScrollDown.json';
-import one from '../../public/assets/one.jpg';
-import eleven from '../../public/assets/11.jpg';
-import seventeen from '../../public/assets/17.jpg';
-import seven from '../../public/assets/seven.jpg';
+import one from '../../assets/one.jpg';
+import eleven from '../../assets/11.jpg';
+import seventeen from '../../assets/17.jpg';
+import seven from '../../assets/seven.jpg';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const sliderData = [

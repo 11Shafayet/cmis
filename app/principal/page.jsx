@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import principal from '../../public/assets/teachers/principal.jpeg';
+import principal from '../../assets/teachers/principal.jpeg';
 
 const Principal = () => {
   return (

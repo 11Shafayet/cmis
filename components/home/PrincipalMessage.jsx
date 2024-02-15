@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import eleven from '../../public/assets/11.jpg';
+import eleven from '../../assets/11.jpg';
 
 const PrincipalMessage = () => {
   return (

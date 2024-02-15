@@ -1,20 +1,20 @@
-import one from './public/assets/teachers/1.jpg';
-import two from './public/assets/teachers/2.jpeg';
-import three from './public/assets/teachers/3.jpeg';
-import four from './public/assets/teachers/4.jpeg';
-import five from './public/assets/teachers/5.jpeg';
-import six from './public/assets/teachers/6.jpeg';
-import seven from './public/assets/teachers/7.jpg';
-import eight from './public/assets/teachers/8.jpeg';
-import nine from './public/assets/teachers/9.jpeg';
-import ten from './public/assets/teachers/10.jpeg';
-import eleven from './public/assets/teachers/11.jpeg';
-import twelve from './public/assets/teachers/12.jpeg';
-import thirteen from './public/assets/teachers/13.jpeg';
-import fourteen from './public/assets/teachers/14.jpeg';
-import fifteen from './public/assets/teachers/15.jpeg';
-import sixteen from './public/assets/teachers/16.jpg';
-import sevnteen from './public/assets/teachers/17.jpeg';
+import one from './assets/teachers/1.jpg';
+import two from './assets/teachers/2.jpeg';
+import three from './assets/teachers/3.jpeg';
+import four from './assets/teachers/4.jpeg';
+import five from './assets/teachers/5.jpeg';
+import six from './assets/teachers/6.jpeg';
+import seven from './assets/teachers/7.jpg';
+import eight from './assets/teachers/8.jpeg';
+import nine from './assets/teachers/9.jpeg';
+import ten from './assets/teachers/10.jpeg';
+import eleven from './assets/teachers/11.jpeg';
+import twelve from './assets/teachers/12.jpeg';
+import thirteen from './assets/teachers/13.jpeg';
+import fourteen from './assets/teachers/14.jpeg';
+import fifteen from './assets/teachers/15.jpeg';
+import sixteen from './assets/teachers/16.jpg';
+import sevnteen from './assets/teachers/17.jpeg';
 
 export const teachersList = [
   // bangla
