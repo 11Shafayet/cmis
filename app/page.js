@@ -1,14 +1,14 @@
-import Hero from '/components/home/Hero';
-import AdditionalLinks from '/components/home/AdditionalLinks';
-import ImLinks from '/components/home/ImLinks';
-import Marquee from '/components/home/Marquee';
-import PrincipalBio from '/components/home/PrincipalBio';
-import PrincipalMessage from '/components/home/PrincipalMessage';
-import SebaBox from '/components/home/SebaBox';
-import Technics from '/components/home/Technics';
-import Terms from '/components/home/Terms';
-import VicePriBio from '/components/home/VicePriBio';
-import VicePriMes from '/components/home/VicePriMes';
+import Hero from '../components/home/Hero';
+import AdditionalLinks from '../components/home/AdditionalLinks';
+import ImLinks from '../components/home/ImLinks';
+import Marquee from '../components/home/Marquee';
+import PrincipalBio from '../components/home/PrincipalBio';
+import PrincipalMessage from '../components/home/PrincipalMessage';
+import SebaBox from '../components/home/SebaBox';
+import Technics from '../components/home/Technics';
+import Terms from '../components/home/Terms';
+import VicePriBio from '../components/home/VicePriBio';
+import VicePriMes from '../components/home/VicePriMes';
 
 export default function Home() {
   return (

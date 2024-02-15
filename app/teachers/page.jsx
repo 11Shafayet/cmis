@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { teachersList } from '/data';
-import principalImage from '/public/assets/teachers/principal.jpeg';
-import vicePrincipalImage from '/public/assets/teachers/vice-principal.jpeg';
-import userImage from '/public/assets/teachers/user.png';
+import principalImage from '../../public/assets/teachers/principal.jpeg';
+import vicePrincipalImage from '../../public/assets/teachers/vice-principal.jpeg';
+import userImage from '../../public/assets/teachers/user.png';
 
 const Teachers = () => {
   const checkDep = (item, dep) => {

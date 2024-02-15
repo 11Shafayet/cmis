@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import employees from '/public/assets/employees.jpeg';
+import employees from '../../public/assets/employees.jpeg';
 
 const Employees = () => {
   return (

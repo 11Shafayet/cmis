@@ -1,5 +1,5 @@
 import { FaWhatsapp } from 'react-icons/fa';
-import map from '/public/assets/map.png';
+import map from '../../public/assets/map.png';
 import Image from 'next/image';
 
 const Footer = () => {
