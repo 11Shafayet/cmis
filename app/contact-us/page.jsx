@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { FaEnvelope, FaFax, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import Link from 'next/link';
-import Header from '@/components/common/Header';
+import Header from '/components/common/Header';
 
 const dummyData = [
   {

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import eleven from '@/public/assets/16.jpg';
+import eleven from '/public/assets/16.jpg';
 
 const VicePriMes = () => {
   return (

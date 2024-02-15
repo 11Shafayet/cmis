@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import { noticeList } from '@data';
+import { noticeList } from '/data';
 
 const AdmissionNotice = () => {
   const [searchedText, setSearchedText] = useState('');

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import holiday from '@/public/assets/holiday-calendar.png';
+import holiday from '/public/assets/holiday-calendar.png';
 
 const HolidayCalendar = () => {
   return (

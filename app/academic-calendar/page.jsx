@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import academic from '@/public/assets/academic-calendar.png';
+import academic from '/public/assets/academic-calendar.png';
 
 const AcademicCalendar = () => {
   return (
