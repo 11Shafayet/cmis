@@ -1,11 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/public/assets/logo.png';
 import { usePathname } from 'next/navigation';
-import { FaChevronDown } from 'react-icons/fa';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const navItems = [
   {
@@ -36,10 +36,6 @@ const navItems = [
   {
     text: 'Academic',
     subMenu: [
-      {
-        text: `Principal's Information`,
-        link: '/principals-information',
-      },
       {
         text: `Principal's Information`,
         link: '/principal',
@@ -104,7 +100,7 @@ const navItems = [
     subMenu: [
       {
         text: `Recent Notices`,
-        link: '/recent-notices',
+        link: '/notice',
       },
       {
         text: `Office Order`,
@@ -129,7 +125,7 @@ const navItems = [
     subMenu: [
       {
         text: `Exam Notices`,
-        link: '/exam-notices',
+        link: '/exam-notice',
       },
       {
         text: `Exam Routine`,
@@ -170,9 +166,26 @@ const navItems = [
 ];
 
 const Navbar = () => {
+  const itemsRef = useRef(null);
+  const submenuRef = useRef(null);
   const pathname = usePathname();
   const [activeNav, setActiveNav] = useState(false);
-  const [subMenu, setSubMenu] = useState(1);
+  const [subMenu, setSubMenu] = useState(0);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        submenuRef.current &&
+        !submenuRef.current.contains(event.target) &&
+        itemsRef.current &&
+        !itemsRef.current.contains(event.target)
+      ) {
+        setSubMenu(0);
+      }
+    }
+
+    document.body.addEventListener('click', handleClickOutside);
+  }, []);
 
   return (
     <>
@@ -197,23 +210,34 @@ const Navbar = () => {
               <span className="block w-11 h-0.5 bg-black" />
               <span className="block w-11 h-0.5 bg-black" />
             </div>
+
             {/* nav */}
             <ul
-              className={`flex flex-col md:flex-row items-center justify-between w-full gap-6 py-4 md:py-0 ${
+              className={`flex-col md:flex-row items-center justify-between w-full gap-6 py-4 md:py-0 ${
                 activeNav ? 'flex' : 'hidden md:flex'
               }`}
+              ref={itemsRef}
             >
               {navItems.map((item, i) => (
                 <li
-                  className={`relative flex items-center gap-2 text-base font-medium hover:scale-105 z-[1000] ${
+                  className={`relative flex items-center gap-2 text-base font-medium z-[1000] hover:cursor-pointer ${
                     pathname === item.link && 'text-primary'
                   }`}
                   key={i}
+                  onClick={() =>
+                    item.subMenu && subMenu !== i
+                      ? setSubMenu(i)
+                      : setSubMenu(0)
+                  }
                 >
                   <Link href={item.link ? item.link : ''}>{item.text}</Link>
-                  {item.subMenu && <FaChevronDown />}
+                  {item.subMenu && subMenu !== i && <FaChevronDown />}
+                  {item.subMenu && subMenu === i && <FaChevronUp />}
                   {item.subMenu && subMenu === i && (
-                    <ul className="absolute top-[111%] flex flex-col gap-y-2 right-0 shadow-light bg-white p-4 md:p-6 min-w-[250px]">
+                    <ul
+                      className="absolute top-[111%] flex flex-col gap-y-2 left-1/2 md:-left-full -translate-x-1/2 md:translate-x-0 shadow-light bg-white p-4 md:p-6 min-w-[250px] rounded z-[9999]"
+                      ref={submenuRef}
+                    >
                       {item.subMenu.map((sub, j) => {
                         return (
                           <li
